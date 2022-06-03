@@ -1,0 +1,1 @@
+print("user created: { userId: 10000, books: [] }")
