@@ -2,7 +2,7 @@ import random
 from decimal import Decimal
 
 from ..base.base_recs import BaseRecs
-from ..collaborative.rbm.rbm_temp_class import RbmRecs
+from ..collaborative.mf.mf_class import MatrixFactorizationRecs
 from ..content_based.lda.lda_class import ContentBasedRecs
 from ..collaborative.user_user.uu_class import UserUserRecs
 import pickle
@@ -16,7 +16,7 @@ class FeatureWeightedLinearStacking(BaseRecs):
 
     def __init__(self):
         self.cb = ContentBasedRecs()
-        self.cf = RbmRecs()
+        self.cf = MatrixFactorizationRecs()
 
         self.wcb1 = Decimal(0.65221204)
         self.wcb2 = Decimal(-0.14638855)
